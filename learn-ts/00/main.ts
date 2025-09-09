@@ -21,5 +21,6 @@
 ts -> js 모듈로 변환이 됩니다.
 isolatedModules -> false
 moduleDetection = "auto"
-<script
+
+npx tsc가 main.ts 파일을 main.js로 바꾸는 역할을 한다
 */

@@ -44,7 +44,7 @@ concat("Hello", "Jiho");
 
 {
   // 화살표 함수
-  //1. 함수 표현식의 타입을 지정하는 방법 (함수 구현부)
+  //1. 함수 표현식의 타입을 지정하는 방법
   const suma = (n1: number, n2: number): number => n1 + n2;
 
   //2. 변수에다가 함수 타입을 지정하는 방법 (타입 시그니쳐)
@@ -70,9 +70,9 @@ concat("Hello", "Jiho");
 }
 
 {
-  function sum(a: number | string, b: number | string): number | string {
-    return a + b; // 유니언 타입끼리는 + 연산 불가능
-  }
+  // function sum(a: number | string, b: number | string): number | string {
+  //   return a + b; // 유니언 타입끼리는 + 연산 불가능
+  // }
 }
 
 {
@@ -97,7 +97,7 @@ concat("Hello", "Jiho");
   }
 
   const str = sum(10, 10); // 성공
-  const str2 = sum(10, "10"); // 에러
+  // const str2 = sum(10, "10"); // 에러
 
   /*
  C++과는 다르게, 각 오버로딩에 따라 다른 구현부를 작성하는 것이 아니라,

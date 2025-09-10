@@ -121,6 +121,7 @@
     width: 10,
     height: 20,
     area() {
+      // area(this. Circle) { 뜻: 이 함수는 Circle 타입 객체에서만 호출되어야 한다.
       console.log(this.width * this.height);
     },
   };
@@ -156,7 +157,7 @@
 // 9번
 {
   interface Dictionary {
-    [key: string]: string;
+    [key: string]: string; // 인덱스 시그니처, 값이 문자열이기만 하면 다 들어감
   }
 
   const man: Dictionary = {
@@ -168,7 +169,14 @@
 // 10번
 {
   interface Operation {
-    (a: number, b: number): number;
+    (a: number, b: number): number; // 함수도 객체! (일급객체)
+
+    ////
+    name: string;
+    length: number;
+    //// 왜 되는가?
+    // 함수 안에는 보이지 않지만 name과 length 속성이 있다.
+    // 따라서 함수 내부의 name과 length 속성을 인식한 것
   }
 
   const add: Operation = (a, b) => a + b;

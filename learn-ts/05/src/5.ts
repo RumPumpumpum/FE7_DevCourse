@@ -40,6 +40,8 @@
 {
   // 조건부 타입 (삼항 연산자와 비슷)
   // T extends U ? X : Y
+  // 만약 T가 U에 할당될 수 있으면(T가 U의 하위 타입이면) X 타입을 사용하고,
+  // 그렇지 않으면 Y 타입을 사용하라
 
   type IsString<T> = T extends string ? "Yes" : "NO";
   type A = IsString<string>; // YES

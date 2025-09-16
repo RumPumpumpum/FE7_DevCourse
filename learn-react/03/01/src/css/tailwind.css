@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@utility btn-primary {
+  @apply bg-amber-700 text-white rounded hover:bg-blue-600 px-4 py-2;
+}

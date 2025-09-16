@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "BagelFat";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2508-2@1.0/HakgyoansimEohangkkumigiB.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bagel-fat {
+  font-family: "BagelFat";
+}
+
+.nanum-pen-script-regular {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: italic;
+}

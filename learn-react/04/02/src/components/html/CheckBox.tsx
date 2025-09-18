@@ -1,21 +1,56 @@
-import { twMerge } from "tailwind-merge";
+// type InputProps = Omit<React.ComponentPropsWithoutRef<"input">, "type"> & {
+//   type: "checkbox";
+// };
 
-type BoxProps = React.ComponentPropsWithoutRef<"input">;
+// export default function CheckBox(props: InputProps) {
+//   const { children = "I Agree", ...rest } = props;
 
-export default function CheckBox(props: BoxProps) {
-  const { children, className = "", ...rest } = props;
+//   return (
+//     <>
+//       <div className="flex items-center gap-2">
+//         <input
+//           id="chk"
+//           className="appearance-none w-5 h-5 rounded-[5px]
+//       border border-[#4f4f4f] checked:bg-[url('/check.svg')]
+//       checked:bg-no-repeat checked:bg-center"
+//           {...rest}
+//         />type InputProps = Omit<React.ComponentPropsWithoutRef<"input">, "type">;
+// export default function CheckBox(props: InputProps) {
+//   const { children = "I Agree", ...rest } = props;
+//   return (
+//     <>
+//       <div className="flex items-center gap-2">
+//         <input
+//           id="chk"
+//           type="checkbox"
+//           className="appearance-none w-5 h-5 rounded-[5px] border border-[#4f4f4f] bg-[#4F4F4F] checked:bg-[url('/check.svg')] checked:bg-no-repeat checked:bg-center"
+//           {...rest}
+//         />
+//         <label htmlFor="chk">{children}</label>
+//       </div>
+//     </>
+//   );
+// }
+//         <label htmlFor="chk">{children}</label>
+//       </div>
+//     </>
+//   );
+// }
 
-  // 체크박스랑 텍스트 감싸는 영역 스타일
-  const containerStyles = "flex items-center gap-2 bg-black";
-  // 체크박스 스타일
-  const checkBoxStyles = twMerge(`h-5 w-5`, className);
-  // 텍스트 스타일
-  const spanlStyles = "text-white";
-
+type InputProps = Omit<React.ComponentPropsWithoutRef<"input">, "type">;
+export default function CheckBox(props: InputProps) {
+  const { children = "I Agree", ...rest } = props;
   return (
-    <div className={containerStyles}>
-      <input type="checkbox" className={checkBoxStyles} {...rest} />
-      <span className={spanlStyles}>{children}</span>
-    </div>
+    <>
+      <div className="flex items-center gap-2">
+        <input
+          id="chk"
+          type="checkbox"
+          className="appearance-none w-5 h-5 rounded-[5px] border border-[#4f4f4f] bg-[#4F4F4F] checked:bg-[url('/check.svg')] checked:bg-no-repeat checked:bg-center"
+          {...rest}
+        />
+        <label htmlFor="chk">{children}</label>
+      </div>
+    </>
   );
 }

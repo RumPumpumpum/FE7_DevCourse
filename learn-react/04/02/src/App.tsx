@@ -10,7 +10,7 @@ export default function App() {
         <Button className="bg-[#4F4F4F]">Add</Button>
         <Button className="bg-[#ED4848]">Cancel</Button>
         <Button className="bg-[#7D48ED]">Success</Button>
-        <CheckBox type="checkbox">
+        <CheckBox>
           <span>
             I agree with <strong>terms</strong> and <strong>policies.</strong>
           </span>

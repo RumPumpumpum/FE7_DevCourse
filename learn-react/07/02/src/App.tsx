@@ -1,7 +1,7 @@
 // const [상태변수, 상태디스패치] = useReducer(리듀서함수, 초깃값)
 
 import { useState } from "react";
-import Count from "./components/Count";
+import Count from "./components/Count.tsx";
 
 export default function App() {
   const [count, setCount] = useState(0);

@@ -1,6 +1,6 @@
 import MovieHeader from "./MovieHeader";
 import MovieList from "./MovieList";
-import MovieLoader from "./MovieLoader";
+// import MovieLoader from "./MovieLoader";
 import MovieMain from "./MovieMain";
 
 export default function Movie() {
@@ -8,8 +8,10 @@ export default function Movie() {
     <>
       <MovieHeader />
       <MovieMain />
-      <MovieList />
-      <MovieLoader title="Popular" />
+      <MovieList title="Now playing" category="now_playing" />
+      <MovieList title="Upcoming" category="upcoming" />
+      <MovieList title="Popular" category="popular" />
+      {/* <MovieLoader title="Popular" /> */}
     </>
   );
 }

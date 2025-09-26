@@ -35,8 +35,7 @@ export default function TodoListItem({
     <>
       {todoArr.map((todo) => {
         {
-          /* 할 일이 완료되면 .todo__item--complete 추가 */
-        }
+          /* 할 일이 완료되면 .todo__item--complete 추가 */        }
 
         const liClassName = `todo__item ${
           todo.completed ? "todo__item--complete" : ""
@@ -65,6 +64,7 @@ export default function TodoListItem({
               </Checkbox>
             )}
 
+
             <div className="todo__button-group">
               <Button
                 className="todo__action-button"
@@ -85,3 +85,6 @@ export default function TodoListItem({
     </>
   );
 }
+
+\
+\
